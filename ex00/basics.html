@@ -15,18 +15,27 @@
 				color: white;
 				text-align: center;
 			}
+			img {
+				max-width: 100%;
+				height: auto;
+				width: auto\9; /* ie8 */
+			}
 			.row {
 				display: flex;
 				padding: 70px;
 			}
 			.column {
 				flex: 33.33%;
+				float: center;
 				padding: 5px;
 				box-shadow: 0 0 10px 2px #3333331a;
 				border-radius: 3px;
 				border-radius: 3px;
 				overflow: hidden;
 				width: 550px;
+			}
+			.text {
+				text-align: center;
 			}
 			.gap {
 				flex: 33.33;
@@ -39,7 +48,7 @@
 			<div class="column">
 				<img height="150em" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/ex00/pngegg.png?raw=true"
 				title="For Zalando shoping click here">
-				<p><a href="https://www.zalando.fi/lapset-home/">Zalando, Click Here</a></p>
+				<p class="text"><a href="https://www.zalando.fi/lapset-home/">Zalando, Click Here</a></p>
 			</div>
 			<div class="gap">
 
@@ -47,7 +56,7 @@
 			<div class="column">
 				<img height="150em" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/ex00/logo-zara-transparent-background-PNG%20(1).png?raw=true"
 				title="For Zara shoping click here">
-				<p><a href="https://www.zara.com/fi/">Zara, Click Here</a></p>
+				<p class="text"><a href="https://www.zara.com/fi/">Zara, Click Here</a></p>
 			</div>
 		</div>
 	</body>
