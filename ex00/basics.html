@@ -15,15 +15,18 @@
 				color: white;
 				text-align: center;
 			}
+			/*images be resizeable*/
 			img {
 				max-width: 100%;
 				height: auto;
 				width: auto\9; /* ie8 */
 			}
+			/*make separet boxes side by side*/
 			.row {
 				display: flex;
 				padding: 70px;
 			}
+			/*split div to 3 piece and give some style to it*/
 			.column {
 				flex: 33.33%;
 				float: center;
@@ -34,11 +37,22 @@
 				overflow: hidden;
 				width: 550px;
 			}
+			/*under images text*/
 			.text {
 				text-align: center;
 			}
+			/*gap between two images without the styles*/
 			.gap {
 				flex: 33.33;
+			}
+			hr {
+				border-top: 2px solid grey
+			}
+			.copyright {
+				text-align: right;
+				font-family: monospace;
+				font-style: italic;
+				margin: 10px;
 			}
 		</style>
 	</head>
@@ -48,7 +62,9 @@
 			<div class="column">
 				<img height="150em" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/ex00/pngegg.png?raw=true"
 				title="For Zalando shoping click here">
-				<p class="text"><a href="https://www.zalando.fi/lapset-home/">Zalando, Click Here</a></p>
+				<p class="text">
+					<a href="https://www.zalando.fi/lapset-home/">Zalando, Click Here</a>
+				</p>
 			</div>
 			<div class="gap">
 
@@ -56,8 +72,18 @@
 			<div class="column">
 				<img height="150em" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/ex00/logo-zara-transparent-background-PNG%20(1).png?raw=true"
 				title="For Zara shoping click here">
-				<p class="text"><a href="https://www.zara.com/fi/">Zara, Click Here</a></p>
+				<p class="text">
+					<a href="https://www.zara.com/fi/">Zara, Click Here</a>
+				</p>
 			</div>
 		</div>
 	</body>
+	<hr>
+	<footer>
+		<div class="copyright">
+			<p>
+				© ghorvath 2022
+			</p>
+		</div>
+	</footer>
 </html>
