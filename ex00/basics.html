@@ -8,24 +8,47 @@
 		<style>
 			body {
 				background-color: pink;
+				font-family: "Poppins", sans-serif;
+				margin: 0;
 			}
 			h1 {
 				color: white;
 				text-align: center;
 			}
-			.pictureLeft {
-				float: left;
+			.row {
+				display: flex;
+				padding: 70px;
+			}
+			.column {
+				flex: 33.33%;
+				padding: 5px;
+				box-shadow: 0 0 10px 2px #3333331a;
+				border-radius: 3px;
+				border-radius: 3px;
+				overflow: hidden;
+				width: 550px;
+			}
+			.gap {
+				flex: 33.33;
 			}
 		</style>
 	</head>
 	<body>
-		<h1>so bigger</h1>
-		<div class="pictureLeft">
-			<img src="https://github.com/mobahug/PHP_Piscine_42/blob/main/ex00/pngegg.png?raw=true">
-		</div>
-		<div class="pictureRight">
-			<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ffi.m.wikipedia.org%2Fwiki%2FTiedosto%3AGigantti_logo.png&psig=AOvVaw2drb-H16g9ib_zkluSt8hd&ust=1647508098115000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMjptI2kyvYCFQAAAAAdAAAAABAD">
-		</div>
+		<h1>so bigger #$@%^&*éœœaå</h1>
+		<div class="row">
+			<div class="column">
+				<img height="150em" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/ex00/pngegg.png?raw=true"
+				title="For Zalando shoping click here">
+				<p><a href="https://www.zalando.fi/lapset-home/">Zalando, Click Here</a></p>
+			</div>
+			<div class="gap">
 
+			</div>
+			<div class="column">
+				<img height="150em" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/ex00/logo-zara-transparent-background-PNG%20(1).png?raw=true"
+				title="For Zara shoping click here">
+				<p><a href="https://www.zara.com/fi/">Zara, Click Here</a></p>
+			</div>
+		</div>
 	</body>
 </html>
