@@ -1,16 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8" >
 		<title>Day of the 42</title>
-		<link rel="stylesheet" href="doft.css">
+		<link rel="stylesheet" href="doft.css" >
 	</head>
 	<body>
+		<!--
+			top bar
+		-->
 		<div class="topblock">
-			<img src=""
-		</div>
-		<div class="blocks">
+			<img id="top_img" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/day_of_the_42.png?raw=true"
+			alt="Welcome on board Mr.President" title="Welcome on board Mr.President" >
 
+			<img id="search_img" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/loupe.png?raw=true"
+			alt="Search" title="Search" >
+
+			<a href="https://www.disney.com">
+				<img id="reload_img" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/reload.png?raw=true"
+				alt="Start from the beginning" title="Start from the beginning" >
+			</a>
+
+			<a href="https://www.relaischateaur.com">
+				<img id="disconnect_img" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/close.gif?raw=true"
+				alt="Disconnect" title="Disconnect" >
+			</a>
+		</div>
+		<br>
+		<!--
+			left bar
+		-->
+		<div class="blocks">
+			<div class="left_block">
+				<img id="actions" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/arrow.png?raw=true"
+				alt="Advance" title="Advance" >
+
+				<img id="actions" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/main.png?raw=true"
+				alt="Take" title="Take" >
+
+				<img id="custom_action" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/oeil.png?raw=true"
+				alt="Look" title="Look" >
+
+				<img id="actions" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/outil.png?raw=true"
+				alt="Use" title="Use" >
+
+				<img id="actions" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/chat-icon.png?raw=true"
+				alt="Speak" title="Speak" >
+			</div>
+			<!--
+				middle bar
+			-->
+			<div class="middle_block">
+				<img id="main_img" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/cluster.jpeg?raw=true"
+				alt="Hive Helsinki the Code School" title="Hive Helsinki the Code School"
+				usemap="#middle_img">
+
+				<map name="middle_img">
+					<area shape="rect" coords="335,410,480,480" href="https://www.ikea.com"
+					alt="I want it" title="I want it" >
+
+					<area shape="circle" coords="890,380,80" href="https://www.apple.com"
+					alt="I get it" title="I get it" >
+				</map>
+			</div>
+			<!--
+				right bar
+			-->
+			<div class="right_block">
+				<img id="book" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/book.png?raw=true"
+				alt="Don't Panic" title="Don't Panic" >
+
+				<img id="towel" src="https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/towel.png?raw=true"
+				alt="Towel" title="Towel" >
+
+				<div id="wall" alt="wall" title="wall" ></div>
+			</div>
+			<!--
+				form bar
+			-->
+			<div class="form">
+				<div style="margin-left: 10px; margin-top: 10px;">
+					<p>Vous </p>
+					<h2>entrez </h2>
+					<p>alors dans une grande piece rempile </p>
+					<p>d' </p>
+					<h3>ordinateurs </h3>
+					<p>... </p>
+					<p>
+						<br>
+						<i>  - Bonjour, vous êtes nouveau ici ? </i>
+					</p>
+				</div>
+				<form>
+					<input type="text" name="field" title="Message here" >
+
+					<input type="submit" name="send" title="Send message" value="Repondre">
+				</form>
+			</div>
 		</div>
 	</body>
 </html>
