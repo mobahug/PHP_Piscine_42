@@ -146,7 +146,7 @@ body {
 #wall {
 	height: 70px;
 	width: 120px;
-	background-image: url(https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/resources/brick.jpeg?raw=true);
+	background-image: url(https://github.com/mobahug/PHP_Piscine_42/blob/main/day00/ex02/pictures/brick.jpeg?raw=true);
 	background-repeat: repeat;
 }
 
