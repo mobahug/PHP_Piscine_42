@@ -33,7 +33,7 @@
 		if (count($data) == 5)
 		{
 			$day = array_search(lcfirst($data[0]), $days, 1);
-			$date = preg_match(, $data[1]);
+			$date = preg_match($datepattern, $data[1]);
 			$month = array_search(lcfirst($data[2]), $months, 1);
 			$year = intval($data[3]);
 			$time = preg_match($timepattern, $data[4]);
