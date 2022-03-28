@@ -2,7 +2,7 @@
 <?php
 	$pattern0 = "/<a.*title=\"(.*?)\"/";
 	$pattern1 = "/<a .*?>(.*?)</";
-	$str = implode("", file("page.html"));
+	$str = implode("", file($argv[1]));
 	preg_match_all($pattern0, $str, $m0);
 	preg_match_all($pattern1, $str, $m1);
 	$m0 = array_slice($m0, 1);
