@@ -1,5 +1,5 @@
 <?php
-	class Jaime extends Lannister
+	class Jaime
 	{
 		function sleepWith($sibling)
 		{
