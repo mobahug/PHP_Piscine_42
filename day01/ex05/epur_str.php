@@ -6,7 +6,7 @@
 		$str = preg_replace('/\s+/', ' ', $str);
 		if ($str)
 		{
-			echo $str . "\n";
+			echo $str . PHP_EOL;
 		}
 	}
 ?>
