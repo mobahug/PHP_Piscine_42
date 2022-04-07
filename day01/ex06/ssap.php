@@ -1,17 +1,14 @@
 #!/usr/bin/php
 <?php
-	$arg = 1;
-	$arr = array();
-	foreach ($argv as $elem)
+	$first = array_slice($argv, 1);
+	$word = array();
+	foreach ($first as $elem)
 	{
-		if ($arg++ > 1)
-		{
-			$temp = preg_split("/\s+/", trim($elem));
-			if ($temp[0] != "")
-				$arr = array_merge($arr, $temp);
-		}
+		$temp = preg_split("/\s+/", trim($elem));
+		//if ($temp[0] != "")
+		$word = array_merge($word, $temp);
 	}
-	sort($arr);
-	foreach ($arr as $elem)
-		echo "$elem" . "\n";
+	sort($word);
+	foreach ($word as $elem)
+		echo "$elem" . PHP_EOL;
 ?>
