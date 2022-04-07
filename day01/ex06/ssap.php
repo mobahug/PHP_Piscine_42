@@ -5,7 +5,6 @@
 	foreach ($first as $elem)
 	{
 		$temp = preg_split("/\s+/", trim($elem));
-		//if ($temp[0] != "")
 		$word = array_merge($word, $temp);
 	}
 	sort($word);
