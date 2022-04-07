@@ -19,58 +19,49 @@
 	</div>
 </body>
 <script>
-
+	setInterval("alert('Please, use me...')", 30000);
 	function calculate()
 	{
-		try
-		{
-
-			var value1 = parseInt(validate(document.getElementById("value1").value.trim()));
-			if (value1 == 0)
-				return 0;
-			var value2 = parseInt(validate(document.getElementById("value2").value.trim()));
-			if (value2 == 0)
-				return 0;
-			var operator = document.getElementById("operator").value;
-			var result = alert(operate(value1, value2, operator));
-		}
-		catch (err)
-		{
-			alert("There was a problem: " + err.message);
-		}
-	}
-	function operate(value1, value2, operator)
-	{
-		if (operator == 'addition')
-			return value1 + value2;
-		else if (operator == 'subtraction')
-			return value1 - value2;
-		else if (operator == 'multiplication')
-			return value1 * value2;
-		else if (operator == 'division')
-			return value1 / value2;
-		else if (operator == 'percentage')
-			return value1 % value2;
-	}
-	function validate(value)
-	{
-		if (value == null || value == "")
-		{
-			alert("Required Field");
-			return 0;
-		}
-		else if (value < 0)
+		var value1 = parseInt(document.getElementById("value1").value.trim());
+		if (value1 < 0)
 		{
 			alert("Error :(");
 			return 0;
 		}
-		else if (isNaN(value))
+		var value2 = parseInt(document.getElementById("value2").value.trim());
+		if (value2 < 0)
 		{
-			alert("Must be a Number Field");
+			alert("Error :(");
 			return 0;
 		}
-		else
-			return value;
+		var operator = document.getElementById("operator").value;
+		operate(value1, value2, operator);
+	}
+	function operate(value1, value2, operator)
+	{
+		var sum;
+		if (operator == 'addition')
+			sum = value1 + value2;
+		else if (operator == 'subtraction')
+			sum = value1 - value2;
+		else if (operator == 'multiplication')
+			sum = value1 * value2;
+		else if (operator == 'division')
+		{
+			if (value2 == 0)
+				sum = "It's over 9000!";
+			else
+				sum = value1 / value2;
+		}
+		else if (operator == 'percentage')
+		{
+			if (value2 == 0)
+				sum = "It's over 9000!";
+			else
+				sum = value1 % value2;
+		}
+		console.log(sum);
+		alert(sum);
 	}
 </script>
 </html>
