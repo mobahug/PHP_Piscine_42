@@ -2,111 +2,192 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Todo List</title>
-	<script src="todo.js" defer></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 	<style>
-		*,
-		*:before,
-		*:after{
-			padding: 0;
-			margin: 0;
+		:root {
+			--dark: #374151;
+			--darker: #1F2937;
+			--darkest: #111827;
+			--grey:#6B7280;
+			--light: #EEE;
+			--pink: #EC4899;
+			--purple: #8b5cf6;
+		}
+
+		* {
 			box-sizing: border-box;
+			margin: 0;
+			font-family: 'Firaa sans', sans-serif;
 		}
-		body{
-			height: 100vh;
-			background: #066acd;
+		body {
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+			background: var(--dark);
+			color: #FFF;
 		}
-		.attribute{
-			width: 40%;
-			top: 50%;
-			left: 50%;
-			background: white;
-			border-radius: 10px;
-			min-width: 450px;
-			position: absolute;
-			min-height: 100px;
-			transform: translate(-50%,-50%);
-		}
-		#newtask{
-			position: relative;
-			padding: 30px 20px;
-		}
-		#newtask input{
-			width: 75%;
-			height: 45px;
-			padding: 12px;
-			color: #111111;
-			font-weight: 500;
-			position: relative;
-			border-radius: 5px;
-			font-family: 'Poppins',sans-serif;
-			font-size: 15px;
-			border: 2px solid #d1d3d4;
-		}
-
-		#newtask input:focus{
-			outline: none;
-			border-color: #0d75ec;
-		}
-		#newtask button{
-			position: relative;
-			float: right;
-			font-weight: 500;
-			font-size: 16px;
-			background-color: #0d75ec;
-			border: none;
-			color: #ffffff;
-			cursor: pointer;
-			outline: none;
-			width: 20%;
-			height: 45px;
-			border-radius: 5px;
-			font-family: 'Poppins',sans-serif;
-		}
-		#tasks{
-			border-radius: 10px;
+		header {
+			padding: 2rem 1rem;
+			max-width: 800px;
 			width: 100%;
-			position: relative;
-			background-color: #ffffff;
-			padding: 30px 20px;
-			margin-top: 10px;
+			margin: 0 auto;
 		}
-
-		.task{
-			border-radius: 5px;
-			align-items: center;
-			justify-content: space-between;
-			border: 1px solid #939697;
-			cursor: pointer;
-			background-color: #c5e1e6;
-			height: 50px;
-			margin-bottom: 8px;
-			padding: 5px 10px;
+		header h1 {
+			font-size: 2.5rem;
+			font-weight: 300;
+			color: var(--grey);
+			margin-bottom: 1rem;
+		}
+		#new-task-form {
 			display: flex;
 		}
-		.task span{
-			font-family: 'Poppins',sans-serif;
-			font-size: 15px;
-			font-weight: 400;
-		}
-		.task button{
-			background-color: #0a2ea4;
-			color: #ffffff;
+		input, button {
+			appearance: none;
 			border: none;
-			cursor: pointer;
 			outline: none;
-			height: 100%;
-			width: 40px;
-			border-radius: 5px;
+			background: none;
+		}
+
+		/*what do you planned field style*/
+		#new-task-input {
+			flex: 1 1 0%;
+			background-color: var(--darker);
+			padding: 1rem;
+			border-radius: 1rem;
+			margin-right: 1rem;
+			color: var(--light);
+			font-size: 1.25rem;
+		}
+		#new-task-input::placholder {
+			color: var(--graay);
+		}
+		#new-task-submit {
+			color: var(--pink);
+			font-size: 1.25rem;
+			font-weight: 700;
+			background-image: linear-gradient(to right, var(--pink), var(--purple));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			cursor: pointer;
+			transition: 0.4s;
+		}
+		/*add task hover options*/
+		#new-task-submit:hover {
+			opacity: 0.8;
+		}
+		#new-task-submit:active {
+			opacity: 0.6;
+		}
+		/*tasks list style*/
+		main {
+			flex: 1 1 0%;
+			max-width: 800px;
+			width: 100%;
+			margin: 0 auto;
+		}
+		.task-list {
+			padding: 1rem;
+		}
+		/*task list style*/
+		.task-list h2 {
+			font-size: 1.5rem;
+			font-weight: 300;
+			color: var(--grey);
+			margin-bottom: 1rem;
+		}
+		#tasks .task {
+			display: flex;
+			justify-content: space-between;
+			background-color: var(--darkest);
+			padding: 1rem;
+			border-radius: 1rem;
+			margin-bottom: 1rem;
+		}
+		/*in the submit bar to see the whole text*/
+		#tasks .task .content {
+			flex: 1 1 0%;
+		}
+
+		#tasks .task .content .text {
+			color: var(--light);
+			font-size: 1.125rem;
+			width: 100%;
+			display: block;
+			transition: 0.4s;
+		}
+		/*indicator if input working*/
+		/*changing colors in the input bar*/
+		#tasks .task .content .text:not(:read-only) {
+			color: var(--pink);
+		}
+		#tasks .task .actions {
+			display: flex;
+			margin: 0-0.5rem;
+		}
+		.task .action button {
+			cursor: pointer;
+			margin: 0 0.5rem;
+			font-size: 1.125rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			transition: 0.4s;
+		}
+		/*edit button get different color cursor hover*/
+		.task .action button:hover {
+			opacity: 0.8;
+		}
+		.task .action button:active {
+			opacity: 0.6;
+		}
+		/*edit button hover color*/
+		.task .actions .edit {
+			background-image: linear-gradient(to right, var(--pink), var(--purple));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		.task .actions .delete {
+			color: crimson;
 		}
 	</style>
 </head>
 <body>
-	<div id="attribute" value="ft_list"></div>
-	<div id="newtask">
-		<input type="text" placeholder="Task to be done..">
-		<button id="push">Add</button>
-	</div>
-	<div id="tasks"></div>
+
+	<header>
+		<h1>To Do List 2022</h1>
+		<form id="new-task-form">
+			<input type="text" name="new-task-input"id="new-task-input" placeholder="What do you have planned?" />
+			<input type="submit" id="new-task-submit" value="Add task" />
+		</form>
+	</header>
+	<main>
+		<section class="task-list">
+			<h2>Tasks</h2>
+
+			<div id="tasks">
+
+				<!--
+******This piece here we translating in the JS file basically******
+					<div class="task">
+					<div class="content">
+						<input
+							type="text"
+							class="text"
+							value="A new task"
+							readonly>
+					</div>
+					<div class="actions">
+						<button class="edit">Edit</button>
+						<button class="delete">Delete</button>
+					</div>
+				</div> -->
+
+			</div>
+		</section>
+	</main>
+
+	<script src="todo.js" defer></script>
 </body>
 </html>
+
