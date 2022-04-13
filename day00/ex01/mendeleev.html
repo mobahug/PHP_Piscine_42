@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Mendeleïev</title>
+		<title>Mendeleev</title>
 		<style>
 			body {
 				font-family: Arial, Helvetica, sans-serif;
@@ -23,14 +23,26 @@
 
 			h2 {
 				text-align: center;
-				margin: 10px;
+				margin: center;
 			}
-
 			td {
 				min-width: 80px;
+				font-weight: bold;
+				font-size: large;
+				position:relative;
+				padding: 25px;
 			}
 			.atomicWeight {
-				text-align: right;
+				font-weight: lighter;
+				position:absolute;
+				bottom:0;
+				right:0;
+			}
+			.atomicNumber {
+				font-weight: lighter;
+				position:absolute;
+				bottom:0;
+				left:0;
 			}
 			.alkaliMetals {
 				background-color: lightsalmon;
@@ -78,11 +90,13 @@
 		</style>
 	</head>
 	<body>
+
 		<h1>Periodic Table of the Elements</h1>
 		<div>
 			<img height="250em" src="https://e7.pngegg.com/pngimages/759/712/png-clipart-dmitri-mendeleev-chemistry-scientist-periodic-table-mendeleev-s-predicted-elements-scientist.png" alt="">
 		</div>
 		<table contenteditable="true">
+
 			<!--
 				ROW_1
 			-->
@@ -283,7 +297,7 @@
 				</td>
 				<td class="diatomicNonemetal">
 					<p class="atomicWeight">79.904</p>
-					<h2>Ga</h2>
+					<h2>Br</h2>
 					<p class="atomicNumber">35</p>
 				</td>
 				<td class="nobleGas">
@@ -402,9 +416,8 @@
 					<p class="atomicNumber">56</p>
 				</td>
 				<td class="lanthanide">
-					<p class="atomicWeight">174.967</p>
-					<h2>Lu</h2>
-					<p class="atomicNumber">71</p>
+					<h2>La - Lu</h2>
+					<p class="atomicNumber">57 - 71</p>
 				</td>
 				<td class="transitionMetals">
 					<p class="atomicWeight">178.49</p>
@@ -497,9 +510,8 @@
 					<p class="atomicNumber">88</p>
 				</td>
 				<td class="actinide">
-					<p class="atomicWeight">(266)</p>
-					<h2>lr</h2>
-					<p class="atomicNumber">103</p>
+					<h2>Lr - Ac</h2>
+					<p class="atomicNumber">89 - 103</p>
 				</td>
 				<td class="transitionMetals">
 					<p class="atomicWeight">(267)</p>
@@ -553,7 +565,7 @@
 				</td>
 				<td class="post-transitionMetals">
 					<p class="atomicWeight">(289)</p>
-					<h2>Fi</h2>
+					<h2>Fl</h2>
 					<p class="atomicNumber">114</p>
 				</td>
 				<td class="unknownChemicalProperties">
@@ -659,6 +671,11 @@
 					<h2>Yb</h2>
 					<p class="atomicNumber">70</p>
 				</td>
+				<td class="lanthanide">
+					<p class="atomicWeight">174.967</p>
+					<h2>Lu</h2>
+					<p class="atomicNumber">71</p>
+				</td>
 			</tr>
 			<!--
 				EXTRACT_2
@@ -735,6 +752,11 @@
 					<p class="atomicWeight">(259)</p>
 					<h2>No</h2>
 					<p class="atomicNumber">102</p>
+				</td>
+				<td class="actinide">
+					<p class="atomicWeight">(266)</p>
+					<h2>Lr</h2>
+					<p class="atomicNumber">103</p>
 				</td>
 			</tr>
 		</table>

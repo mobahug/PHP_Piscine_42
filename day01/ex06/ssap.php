@@ -9,5 +9,5 @@
 	}
 	sort($word);
 	foreach ($word as $elem)
-		echo "$elem" . PHP_EOL;
+		echo "$elem" . "\n";
 ?>
