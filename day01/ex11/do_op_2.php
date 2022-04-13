@@ -18,13 +18,13 @@
 				$result = $value1 * $value2;
 			else if ($op[2] == "/")
 			{
-				if ($value1 == NULL || $value2 == NULL)
+				if ($value2 == NULL)
 					return 0;
 				$result = $value1 / $value2;
 			}
 			else if ($op[2] == "%")
 			{
-				if ($value1 == NULL || $value2 == NULL)
+				if ($value2 == NULL)
 					return 0;
 				$result = $value1 % $value2;
 			}
