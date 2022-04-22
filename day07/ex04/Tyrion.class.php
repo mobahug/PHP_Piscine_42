@@ -1,17 +1,17 @@
 <?php
-	class Tyrion
+	class Tyrion extends Lannister
 	{
 		function sleepWith($sibling)
 		{
-			if (get_class($sibling) == "Jaime")
+			if ($sibling instanceof Jaime)
 			{
 				print("Not even if I'm drunk !" . PHP_EOL);
 			}
-			else if (get_class($sibling) == "Sansa")
+			else if ($sibling instanceof Sansa)
 			{
 				print("Let's do this." . PHP_EOL);
 			}
-			else if (get_class($sibling) == "Cersei")
+			else if ($sibling instanceof Cersei)
 			{
 				print("Not even if I'm drunk !" . PHP_EOL);
 			}

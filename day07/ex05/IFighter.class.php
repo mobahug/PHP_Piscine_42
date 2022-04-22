@@ -1,6 +1,6 @@
 <?php
 	interface IFighter
 	{
-		function fight();
+		public function fight();
 	}
 ?>

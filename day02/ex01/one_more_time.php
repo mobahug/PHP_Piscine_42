@@ -3,13 +3,13 @@
 
 	date_default_timezone_set('Europe/Paris');
 	$days = array(
-		"lundi",
-		"mardi",
-		"mercredi",
-		"jeudi",
-		"vendredi",
-		"samedi",
-		"dimanche"
+		1 => "lundi",
+		2 => "mardi",
+		3 => "mercredi",
+		4 => "jeudi",
+		5 => "vendredi",
+		6 => "samedi",
+		7 => "dimanche"
 	);
 
 	$months = array(
@@ -44,7 +44,10 @@
 		{
 			$str = "$month $date[0] $year $time[0]";
 			$timestamp = strtotime($str);
-			echo $timestamp;
+			if (date("N", $timestamp) == $day && date("d", $timestamp) == $date[0] && date("M", $timestamp) == $month && date("Y", $timestamp) == $year)
+				echo $timestamp . "\n";
+			else
+				echo "Wrong Format\n";
 		}
 		else
 			echo "Wrong Format\n";

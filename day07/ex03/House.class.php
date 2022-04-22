@@ -1,7 +1,11 @@
 <?php
-	class House
+	abstract class House
 	{
-		function introduce()
+		abstract function getHouseName();
+		abstract function getHouseSeat();
+		abstract function getHouseMotto();
+
+		public function introduce()
 		{
 			print
 			(

@@ -1,2 +1,2 @@
-SELECT ROUND(AVG(cinema.nb_seats), 0) AS 'average'
-FROM db_ghorvath.cinema;
+SELECT CEILING(AVG(`nb_seats`)) AS 'average'
+FROM `cinema`;

@@ -1,11 +1,11 @@
 <?php
 	class Targaryen
 	{
-		function resistsFire()
+		public function resistsFire()
 		{
 			return false;
 		}
-		function getBurned()
+		public function getBurned()
 		{
 			if (!$this->resistsFire())
 			{

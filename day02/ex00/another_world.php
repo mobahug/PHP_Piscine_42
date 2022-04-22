@@ -2,7 +2,7 @@
 <?php
 	if ($argc > 1)
 	{
-		if (argv[1])
+		if ($argv[1])
 		{
 			$pattern = "/\s+/";
 			$str = trim($argv[1]);
