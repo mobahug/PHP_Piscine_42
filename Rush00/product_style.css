@@ -1,0 +1,57 @@
+h1 {
+    text-align: center;
+    font-family: arial;
+    font-size: 12px;
+}
+
+p {
+    text-align: center;
+    font-family: arial;
+}
+
+.card {
+    padding: 40px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    text-align: center;
+    font-family: arial;
+    width: 407px;
+    height: 387px;
+    position: relative;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+    text-align: center;
+    font-family: arial;
+}
+
+.cart {
+    height: 7vh;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.products-display {
+    width: 90%;
+    height: 95vh;
+    background-color: aquamarine;
+}
+
+img {
+    height: 144px;
+}

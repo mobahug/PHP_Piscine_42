@@ -1,0 +1,97 @@
+body {
+    color: black;
+    background-color: #505050;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    width: 87vw;
+    height: 17vh;
+    background-color: #5a5aff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5vw;
+    -webkit-box-shadow: 7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.menu-items {
+    background-color: #ffffff;
+    font-size: xx-large;
+    height: fit-content;
+}
+
+.cart {
+    height: 7vh;
+}
+
+#actions {
+    height: 70px;
+    margin-top: 2px;
+}
+
+#custom_action {
+    height: 70px;
+    margin-top: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: red;
+    border-width: 5px;
+}
+
+.middle_block {
+    display: flex;
+    align-items: center;
+    height: 77vh;
+    width: 87vw;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    background-color: cadetblue;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left-side {
+    position: relative;
+    width: 49vw;
+    height: 72vh;
+}
+
+.homepage-products {
+    width: 30vw;
+    height: 72vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 277px;
+}
+
+.card {
+    width: 25vh;
+    height: fit-content;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background-color: #5a5aff;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-box-shadow: 10px 14px 15px 5px #000000;
+    box-shadow: 10px 14px 15px 5px #000000;
+}
+
+.scam-pic {
+    -webkit-box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 20px 18px 6px 10px rgba(0, 0, 0, 0);
+    box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 20px 18px 6px 10px rgba(0, 0, 0, 0);
+    margin-left: 40px;
+    margin-left: 129px;
+    margin-top: 196px;
+}
+
+
+/*middle bar IDs*/

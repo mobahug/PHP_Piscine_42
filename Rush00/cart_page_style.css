@@ -1,0 +1,112 @@
+body {
+    background-color: pink;
+    width: auto;
+}
+
+.main-navigation {
+    margin-left: 130px;
+    z-index: 3;
+}
+
+.text {
+    margin-left: 50vw;
+    margin-top: 5vh;
+}
+
+.items-and-checkout {
+    height: 78vh;
+    width: 90%;
+    /* background-color: aqua; */
+    margin-left: 6vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content {
+    width: 67vw;
+    height: 100%;
+    background-color: rgb(252, 219, 255);
+    z-index: 1;
+    margin-left: 1%;
+    padding-top: 1vh;
+}
+
+.item {
+    margin-left: 4vw;
+    /* background: rgb(255, 255, 255); */
+}
+
+.item-image {
+    width: 10vw;
+    max-height: 11vh;
+    width: auto;
+    margin-top: 2vh;
+}
+
+.item-info {
+    font-size: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.item-info p {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.usr-info-and-checkout {
+    width: 19vw;
+    height: 17vh;
+    z-index: 1;
+    /* background-color: chartreuse; */
+    margin-left: 69vw;
+    position: absolute;
+    margin-top: 32vh;
+    padding-top: 2vh;
+    border: 5px solid yellow;
+    border-radius: 5px;
+}
+
+.user-info {
+    height: 20px;
+    width: 100%;
+    background-color: azure;
+}
+
+.myButton {
+    width: 36%;
+    box-shadow: inset 8px 7px 35px 0px #fff6af;
+    box-shadow: 8px 7px 35px 0px #fff6af;
+    background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color: #ffec64;
+    border-radius: 28px;
+    border: 1px solid #ffaa22;
+    display: inline-block;
+    cursor: pointer;
+    color: #333333;
+    font-family: Verdana;
+    font-size: 28px;
+    font-style: italic;
+    padding: 29px 56px;
+    text-decoration: none;
+    text-shadow: 8px 8px 0px #ffee66;
+}
+
+.myButton:hover {
+    background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffab23;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+form {
+    display: block;
+    margin-left: 19%;
+    width: 100%;
+}

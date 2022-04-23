@@ -1,0 +1,98 @@
+/*
+unoredered list styling
+*/
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background: #1bc2a2;
+}
+
+/*
+placing next to each other lists in blocks
+parent child
+*/
+
+ul li {
+	display: block;
+	position: relative;
+	float: left;
+	background: #1bc2a2;
+}
+
+/*
+need this as none cuz later will specify more stuff
+parent child parent
+*/
+
+li ul {
+	display: none;
+}
+
+/*
+specifying content
+parent child content
+*/
+
+ul li a {
+	display: block;
+	padding: 1em;
+	text-decoration: none;
+	white-space: nowrap;
+	color: #fff;
+}
+
+/*
+specifying content HOVER
+parent child content HOVER
+*/
+
+ul li a:hover {
+	background: #2c3e50;
+}
+
+/*
+specifying list hover unordered list
+ul will get li:hover stuffs
+child hover inside new parent
+*/
+
+li:hover > ul {
+	display: block;
+	position: absolute;
+}
+
+/*
+avoiding that list group up, but be listed
+child hovered child
+*/
+
+li:hover li {
+	float: none;
+}
+
+/*
+all the li hovers attribute will have the same color
+*/
+
+li:hover a {
+	background: #1bc2a2;
+}
+
+/*
+list in list color
+*/
+
+li:hover li a:hover {
+	background: #2c3e50;
+}
+
+/*
+each list go to left, so wont overlap each other
+*/
+
+ul ul ul {
+	left: 100%;
+	top: 0;
+}
