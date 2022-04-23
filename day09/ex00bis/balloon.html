@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		#ball {
+			margin: 25% auto auto auto;
+			height: 200px;
+			width: 200px;
+			background: red;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div id="ball"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+	let ball /* = $("#ball") */;
+	let index = 0;
+	let size = 200;
+	const colors = ['red', 'green', 'blue'];
+
+	//ball.addEventListener('click', () => onClick(ball));
+	$(document).ready(function(){
+		ball = $('#ball');
+		ball.click(onClick);
+		ball.mouseleave(leave);
+	});
+
+	function onClick()
+	{
+		size = size + 10;
+		index++;
+		if (index == 3)
+		{
+			index = 0;
+		}
+		if (size > 420)
+		{
+			size = 200;
+		}
+		/*size grow with 10 pixel*/
+
+		ball.css({
+			'background': colors[index],
+			'width': size + "px",
+			'height': size + "px"
+		});
+	}
+
+	function leave()
+	{
+		index--;
+		if (index == -1)
+		{
+			index = 2;
+		}
+		ball.css({
+			'background': colors[index]
+		});
+		if (size > 200)
+		{
+			size = size - 5;
+			ball.css({
+				'width': size + "px",
+				'height': size + "px"
+			});
+		}
+	}
+</script>
+</html>

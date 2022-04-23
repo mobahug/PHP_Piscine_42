@@ -4,29 +4,27 @@
 	<meta charset="UTF-8">
 	<style>
 		#ball {
-			margin: 50% auto auto auto;
+			margin: 25% auto auto auto;
 			height: 200px;
 			width: 200px;
 			background: red;
 			border-radius: 50%;
 		}
 	</style>
-
 </head>
 <body>
-	<audio id="audio1" src="balloon.mp3"></audio>
-	<div id="ball" onmouseleave="leave(ball)" onClick="play()"></div>
+	<div id="ball" onmouseleave="leave(ball)"></div>
 </body>
 <script>
-	let ball = document.getElementById("ball");
-	//var audio = new Audio('balloon.mp3');
-	let index = 0;
-	let size = 200;
+	var ball = document.getElementById("ball");
+	var index = 0;
+	var size = 200;
 	const colors = ['red', 'green', 'blue'];
 
 	ball.addEventListener('click', () => onClick(ball));
 	function onClick(ball)
 	{
+		size = size + 10;
 		index++;
 		if (index == 3)
 		{
@@ -36,21 +34,13 @@
 		{
 			size = 200;
 		}
-		size = size + 10;
+		/*size grow with 10 pixel*/
+
 		ball.style.backgroundColor = colors[index];
 		ball.style.width = size + "px";
 		ball.style.height = size + "px";
-		//audio.play();
+	}
 
-	}
-	function play() {
-	var audio = document.getElementById('audio1');
-	if (audio.paused) {
-		audio.play();
-	}else{
-		audio.currentTime = 0
-	}
-}
 	function leave(ball)
 	{
 		index--;
@@ -68,17 +58,3 @@
 	}
 </script>
 </html>
-
-<!--
-
-			const ball = document.getElementsByClassName("ball");
-
-		ball.addEventListener('click', () => function handleClick(ball) {
-
-		})
-
-		function handleClick(ball)
-		{
-
-		}
--->

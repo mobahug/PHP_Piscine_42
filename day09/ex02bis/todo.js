@@ -1,16 +1,11 @@
-/*
-Execute a JavaScript immediately after a page has been loaded.
-*/
-window.onload = function ()
-{
-	document.querySelector("#new-task").addEventListener("click", newTask);
-	ourCookieArr = findOurCookie();
+$(document).ready(function(){
+	$("#new-task").click(newTask);
+	var ourCookieArr = findOurCookie();
 	if (ourCookieArr.length > 0)
 	{
 		populateList(ourCookieArr);
 	}
-}
-
+})
 
 function newTask()
 {
@@ -29,11 +24,9 @@ function newTask()
 	{
 		task = task.replaceAll(';', '🖕');
 	}
-	if (task !== '')
-	{
-		addTaskElem(task);
-		addTaskCookie(task);
-	}
+
+	addTaskElem(task);
+	addTaskCookie(task);
 }
 
 
@@ -43,7 +36,7 @@ function removeTask ()
 	if (confirm("You sure you want this task removed?"))
 	{
 		var cookieArr = findOurCookie();
-		var idx = cookieArr.indexOf(this.innerHTML);
+		var idx = cookieArr.indexOf($(this).html());
 
 		/*
 		Removing cookies from the array.
@@ -53,7 +46,7 @@ function removeTask ()
 			cookieArr.splice(idx, 1);
 		}
 
-		this.parentElement.removeChild(this);
+		$(this).remove();
 
 		/*
 		Handling if only 2 cookie left to not delete both at the same time.
@@ -78,21 +71,19 @@ function addTaskElem (task)
 	Creating the task box with an option if clicking to it can remove.
 	*/
 
-	const newDiv = document.createElement("div");
-	newDiv.classList.add('task');
-	newDiv.addEventListener("click", removeTask);
+	const newDiv = $('<div>', { class: 'task' });
+	newDiv.click(removeTask);
 
 	/*
 	Transferting the task array content into the task box and adding it to the list.
 	*/
-	const newContent = document.createTextNode(task);
-	newDiv.appendChild(newContent);
+	//const newContent = document.createTextNode(task);
+	newDiv.append(task);
 
 	/*
 	With prepend function listing from the newest top to oldest bottom in ft_list box.
 	*/
-	const ft_list = document.getElementById('ft_list');
-	ft_list.prepend(newDiv);
+	$('#ft_list').prepend(newDiv);
 }
 
 
@@ -101,10 +92,7 @@ function addTaskCookie(task)
 	ourCookieArr = findOurCookie();
 
 	/* unshift() adds new items to the beginning of an array. */
-	if (task !== '')
-	{
-		ourCookieArr.unshift(task);
-	}
+	ourCookieArr.unshift(task);
 
 	/*
 	Set expire date to the cookie and joining them with pipe (|).

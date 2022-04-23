@@ -15,15 +15,24 @@
 			<option value="percentage">%</option>
 		</select>
 		<input type="text" id="value2">
-		<input type="submit" value="Try me!" onclick="calculate();">
+		<input type="submit" id="submission" value="Try me!" onclick="calculate">
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script>
-	setInterval("alert('Please, use me...')", 30000);
+
+	$(document).ready(function(){
+		setInterval("alert('Please, use me...')", 30000);
+		var submission = $('#submission');
+		submission.click(calculate);
+	});
+
 	function calculate()
 	{
-		var value1 = (document.getElementById("value1").value);
-		var value2 = (document.getElementById("value2").value);
+		var value1 = $('#value1').val();
+		var value2 = $('#value2').val();
+		var sum = $('#sum').val();
+		var operator = $('#operator').val();
 		if (value1 == "" || value2 == "" || value1.indexOf(".") != -1 || value2.indexOf(".") != -1)
 		{
 			alert ("Error :(");
@@ -34,8 +43,6 @@
 			value1 = Number(value1);
 			value2 = Number(value2);
 		}
-		var operator = document.getElementById("operator").value;
-		var sum;
 		if (validate(value1, value2) == 1)
 		{
 			if (operator == 'addition')
@@ -71,5 +78,6 @@
 		}
 		return 1;
 	}
+
 </script>
 </html>
