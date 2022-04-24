@@ -29,6 +29,10 @@ function newTask()
 	{
 		task = task.replaceAll(';', '🖕');
 	}
+	if (task.indexOf(' ') >= 0)
+	{
+		task = task.replaceAll(' ', '🖕');
+	}
 	if (task !== '')
 	{
 		addTaskElem(task);
@@ -60,13 +64,11 @@ function removeTask ()
 		*/
 		if (cookieArr.length === 0)
 		{
-			document.cookie = 'ft_list=' +
-			"; expires=Sun, 1 Jan 2020 00:00:00 UTC; secure; path=/;";
+			document.cookie = 'ft_list=' + "; expires=Sun, 1 Jan 2020 00:00:00 UTC; secure; path=/;";
 		}
 		else
 		{
-			document.cookie = 'ft_list=' + cookieArr.join('Ω') +
-			"; expires=Thu, 18 Dec 2050 12:00:00 UTC; secure; path=/;";
+			document.cookie = 'ft_list=' + cookieArr.join('Ω') + "; expires=Thu, 18 Dec 2050 12:00:00 UTC; secure; path=/;";
 		}
 	}
 }
@@ -109,8 +111,7 @@ function addTaskCookie(task)
 	/*
 	Set expire date to the cookie and joining them with pipe (|).
 	*/
-	document.cookie = 'ft_list=' + ourCookieArr.join('Ω') +
-	"; expires=Thu, 18 Dec 2050 12:00:00 UTC; secure; path=/;";
+	document.cookie = 'ft_list=' + ourCookieArr.join('Ω') + "; expires=Thu, 18 Dec 2050 12:00:00 UTC; secure; path=/;";
 }
 
 
@@ -125,7 +126,6 @@ function findOurCookie()
 
 	for (i = 0; i < allCookiesArr.length; i++)
 	{
-
 		if (allCookiesArr[i].indexOf('ft_list=') == 0)
 		{
 			break;
@@ -133,7 +133,6 @@ function findOurCookie()
 	}
 	if (i === allCookiesArr.length)
 	{
-
 		return [];
 	}
 	else
@@ -149,7 +148,7 @@ function populateList(cookieArr)
 {
 	for (let i = cookieArr.length - 1; i >= 0; i--)
 	{
-		if (cookieArr[i] != '')
+		if (cookieArr[i] !== '')
 		{
 			addTaskElem(cookieArr[i]);
 		}
